@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document.write()사용</title>
+  </head>
+  <body></body>
+  <script>
+    // document.write("<h3>Welcome</h3>");
+    // document.write("<pre>");
+    // document.writeln("hello"); // 브라우저에 쓰는 거기 때문에 write와 writeln의 차이가 전혀 없다
+    // document.write("hi");
+    // document.write("</pre>");
+    // // pre라는 태그 안에서는 줄바꿈 문자가 인식이 된다
+    // // 사용자 댓글 같은 것도 pre태그로 감싸주는 경우가 있다.
+    with (document) {
+      // with() 이 소괄호 안에 document를 써주면 알아서 document가 붙어서 나온다.
+      write("<h3>Welcome</h3>");
+      write("<pre>");
+      writeln("hello");
+      write("hi");
+      write("</pre>");
+    }
+  </script>
+</html>
