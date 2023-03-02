@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL에 자바스크립트 코드 작성</title>
+  </head>
+  <body>
+    <h3>링크의 href에 자바스크립트 코드 작성</h3>
+    <hr />
+    <a
+      href="javascript:void(0);"
+      onclick="console.log(this.nextElementSibling.src = '../img/icon2.png')"
+      ;
+      >이미지 변경</a
+    >
+    <!-- javascript:라고 쓰면 새로운 js 파일이 열리는 것, 
+    여기서 this를 쓰면 태그를 관리할 수없고, 윈도우를 가리킴
+    a태그는 함수의 이름을 쓰는 용도 정도로만 사용된다. 
+    a태그의 href태그를 막아주는 >> void(0) >> 이상없이 종료라는 뜻,
+    즉 a태그의 링크이동을 막기 위해서는 위처럼 쓰는 게 맞다 -->
+    <!-- 뒤의 onclick은 다시 이벤트리스너를 추가해준 것, 여기서는 다시 
+    this를 써줘도 a태그로 인식을 해준다-->
+    <!--this.nextElementSibling은 다음 요소 (형제자매)를 가르킴, 
+    즉, img 태그를 가져온것 -->
+    <img src="../img/icon1.png" />
+  </body>
+</html>
