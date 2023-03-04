@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    var character = prompt("출력할 문자를 입력하세요.");
+    var count = prompt("몇 번 출력하실?");
+
+    document.write("<h3>pr(<q>" + character + "</q>," + count + ")</h3>");
+    documnet.write(
+      `<input type = 'button' onclick='pr("` +
+        character +
+        `",` +
+        count +
+        `,print)' value = '결과확인'>`
+    );
+
+    function pr(character, count, callback) {
+      if (callback) {
+        var result = "";
+        for (let i = 0; i < count; i++) {
+          result += character;
+        }
+        callback(result);
+      }
+    }
+
+    function print() {
+      document.write("<h4>결과 : " + result + "</h4>");
+    }
+  </script>
+</html>
